@@ -1,0 +1,44 @@
+.header {
+    padding: 20px;
+    max-width: 399px;
+    position: relative;
+    z-index: 2;
+}
+
+.header * {
+    user-select: none;
+}
+
+.header .title {
+    padding-bottom: 10px;
+    font-weight: bolder;
+    font-size: 35px;
+    word-break: break-all;
+}
+
+.header .subtitle {
+    text-align: right;
+    font-size: 13px;
+    font-weight: lighter;
+}
+
+.header .dot {
+    width: 4px;
+    height: 4px;
+    background-color: black;
+    display: inline-block;
+    margin: 2px 3px;
+    border-radius: 4px;
+
+}
+
+.header .asterisk {
+    font-size: 14px;
+    vertical-align: top;
+    padding-left: 2px;
+}
+
+.header .title:hover {
+    color:lavender;
+
+}

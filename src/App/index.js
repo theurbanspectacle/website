@@ -1,12 +1,16 @@
 import React from 'react';
+import Background from '../Background';
+import Header from '../Header';
 import './App.css';
 
 export default class App extends React.Component {
   render() {
     return (
       <div className="app">
-        <h1>Oliver Martin's Awesome Website</h1>
+        <Background />
+        <Header />
       </div>
+        
     );
   }
 };
