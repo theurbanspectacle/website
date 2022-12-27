@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v2
       -
         name: Install Node dependencies
-        run: npm install
+        run: npm ci
       -
         name: Build site
         run: npm run build
@@ -26,7 +26,7 @@ jobs:
         uses: crazy-max/ghaction-github-pages@v2
         with:
           target_branch: gh-pages
-          build_dir: dist
+          build_dir: build
           fqdn: theurbanspectacle.com
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
