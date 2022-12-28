@@ -60,7 +60,7 @@ export default class Background extends React.Component {
           direction: 'none',
           random: false,
           straight: false,
-          out_mode: 'out',
+          out_mode: 'bounce',
           bounce: false,
           attract: {
             enable: false,
