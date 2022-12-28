@@ -84,7 +84,7 @@ export default class Background extends React.Component {
         },
         modes: {
           grab: {
-            distance: 140,
+            distance: 110,
             line_linked: {
               opacity: 1
             }
