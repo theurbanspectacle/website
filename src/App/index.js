@@ -1,11 +1,21 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import Background from '../Background';
 import Header from '../Header';
 import MainView from '../MainView';
 import Navigation from '../Navigation';
 import './App.css';
 
-export default class App extends React.Component {
+class App extends React.Component {
+  componentDidMount() {
+    const { history } = this.props
+    const route = localStorage.getItem('route');
+
+    if (route) {
+      localStorage.removeItem('route');
+      history.push(route);
+    }
+  }
   render() {
     return (
       <div className="app">
@@ -17,3 +27,5 @@ export default class App extends React.Component {
     );
   }
 };
+
+export default withRouter(App);
