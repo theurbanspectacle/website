@@ -1,0 +1,19 @@
+.navigation {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+}
+
+.navigation .nav-btn, .navigation .btn-transform {
+    color:black;
+    padding: 10px 20px;
+    display: block;
+}
+
+.navigation .nav-btn:hover {
+    color: gray;
+}
+
+.navigation .btn-transform {
+    font-size: 10px;
+}
