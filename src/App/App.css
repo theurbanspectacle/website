@@ -1,6 +1,5 @@
 .app {
     border: 1px solid black;
-    margin: 22px; 
-    height: calc(100vh - 44px);
+    flex: 1;
     position: relative;
 }

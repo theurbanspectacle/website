@@ -7,6 +7,11 @@ import Navigation from '../Navigation';
 import './App.css';
 
 class App extends React.Component {
+  handleWindowHeight = () => {
+    const doc = document.documentElement
+    doc.style.setProperty('--app-height', `${window.innerHeight}px`)
+  };
+
   componentDidMount() {
     const { history } = this.props
     const route = localStorage.getItem('route');
@@ -15,6 +20,10 @@ class App extends React.Component {
       localStorage.removeItem('route');
       history.push(route);
     }
+
+    window.addEventListener('resize', this.handleWindowHeight)
+
+    this.handleWindowHeight();
   }
   render() {
     return (
