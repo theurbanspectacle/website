@@ -21,9 +21,12 @@ class App extends React.Component {
       history.push(route);
     }
 
-    window.addEventListener('resize', this.handleWindowHeight)
-
-    this.handleWindowHeight();
+    window.addEventListener('resize', this.handleWindowHeight);
+    window.dispatchEvent(new Event('resize'));
+    // Trigger resize to clean up particles
+    setTimeout(() => {
+      window.dispatchEvent(new Event('resize'));
+    }, 1500);
   }
   render() {
     return (
