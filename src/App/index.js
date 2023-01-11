@@ -26,7 +26,7 @@ class App extends React.Component {
     // Trigger resize to clean up particles
     setTimeout(() => {
       window.dispatchEvent(new Event('resize'));
-    }, 1500);
+    });
   }
   render() {
     return (
