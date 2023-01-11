@@ -8,8 +8,8 @@ import './App.css';
 
 class App extends React.Component {
   handleWindowHeight = () => {
-    const doc = document.documentElement
-    doc.style.setProperty('--app-height', `${window.innerHeight}px`)
+    const doc = document.body;
+    doc.style.setProperty('height', `${window.innerHeight}px`);
   };
 
   componentDidMount() {
