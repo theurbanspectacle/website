@@ -13,3 +13,9 @@
     margin-top: 100px;
     z-index: 2;
 }
+
+@media screen and (max-width: 640px) {
+    .about-me {
+        margin-top: 20px;
+    }
+}
