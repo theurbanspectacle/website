@@ -1,0 +1,19 @@
+.main-view {
+    flex: 1;
+    overflow-y: auto;
+    max-height: 100%;
+    padding: 0 10px 10px 10px;
+}
+
+.wrapper.needs-scrolling .main-view {
+    z-index: 2;
+    position: relative;
+}
+
+@media screen and (max-width: 640px) {
+    .main-view {
+        min-width: unset;
+        overflow-y: unset;
+        position: static;
+    }
+}

@@ -3,3 +3,27 @@
     flex: 1;
     position: relative;
 }
+
+.wrapper {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 0;
+}
+
+@media screen and (max-width: 640px) {
+    .wrapper {
+        display: block;
+        overflow-y: auto;
+    }
+    .wrapper.needs-scrolling {
+        z-index: 2;
+        position: relative;
+    }
+}

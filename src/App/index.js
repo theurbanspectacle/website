@@ -7,9 +7,24 @@ import Navigation from '../Navigation';
 import './App.css';
 
 class App extends React.Component {
+  handleScrollCheck = () => {
+    const wrapper = document.querySelector('.wrapper');
+    const mainView = document.querySelector('.main-view');
+    if (wrapper && mainView) {
+      if (mainView.scrollHeight > mainView.clientHeight || wrapper.scrollHeight > wrapper.clientHeight) {
+        wrapper.classList.add('needs-scrolling');
+      } else {
+        wrapper.classList.remove('needs-scrolling');
+      }
+    } else {
+      console.warn('Unable to find wrapper.', {wrapper, mainView});
+    }
+  };
+
   handleWindowHeight = () => {
     const doc = document.body;
     doc.style.setProperty('height', `${window.innerHeight}px`);
+    this.handleScrollCheck();
   };
 
   componentDidMount() {
@@ -27,14 +42,24 @@ class App extends React.Component {
     setTimeout(() => {
       window.dispatchEvent(new Event('resize'));
     });
+
+    // Watch route changes
+    history.listen(() => {
+      this.handleScrollCheck();
+    })
   }
+
   render() {
     return (
       <div className="app">
         <Background />
-        <Header />
-        <Navigation />
-        <MainView />
+        <div className="content-wrapper">
+          <Header />
+          <div className="wrapper">
+            <Navigation />
+            <MainView />
+          </div>
+        </div>  
       </div>
     );
   }

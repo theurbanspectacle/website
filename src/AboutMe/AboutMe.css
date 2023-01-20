@@ -1,0 +1,15 @@
+.about-me, p {
+    color: black;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 18px;
+    text-align: justify;
+}
+
+
+.about-me {
+    max-width: 260px;
+    margin: 0 auto;
+    margin-top: 100px;
+    z-index: 2;
+}
