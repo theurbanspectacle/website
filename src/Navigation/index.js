@@ -1,5 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { brands } from '@fortawesome/fontawesome-svg-core/import.macro';
+
 import './Navigation.css';
 
 class Navigation extends React.Component {
@@ -21,10 +24,17 @@ class Navigation extends React.Component {
   render() {
     return (
       <div className="navigation">
-        {this.getContent('/', 'Home')}
-        {this.getContent('/portfolio', 'Portfolio')}
-        {this.getContent('/resume', 'Resume')}
-        {this.getContent('/contact', 'Contact')}
+        <div className="navigation-items">
+          {this.getContent('/', 'Home')}
+          {this.getContent('/portfolio', 'Portfolio')}
+          {this.getContent('/resume', 'Resume')}
+          {this.getContent('/contact', 'Contact')}
+        </div>
+        <div className='navigation-socials'>
+          <a href="https://github.com/theurbanspectacle" className="navigation-social-links" rel="noreferrer" target="_blank" title='GitHub'><FontAwesomeIcon size='xl' icon={brands('square-github')} /></a>
+          <a href="https://linkedin.com/in/genesisgregorio" className="navigation-social-links" rel="noreferrer" target="_blank" title='LinkedIn'><FontAwesomeIcon size='xl' icon={brands('linkedin')} /></a>
+          <a href="https://instagram.com/theurbanspectacle" className="navigation-social-links" rel="noreferrer" target="_blank" title='Instagram'><FontAwesomeIcon size='xl' icon={brands('square-instagram')} /></a>
+        </div>
       </div>
     );
   }

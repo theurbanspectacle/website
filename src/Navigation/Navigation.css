@@ -1,13 +1,15 @@
 .navigation {
-    display: inline-block;
+    display: flex;
     position: relative;
     z-index: 2;
+    flex-direction: column;
 }
 
 .navigation .nav-btn, .navigation .btn-transform {
     color:black;
     padding: 10px 20px;
     display: block;
+    font-weight: 600;
 }
 
 .navigation .nav-btn:hover {
@@ -16,4 +18,25 @@
 
 .navigation .btn-transform {
     font-size: 10px;
+}
+
+.navigation .navigation-items {
+    flex: 1;
+}
+
+.navigation .navigation-socials {
+    padding-left: 6px;
+    padding-bottom: 3px;
+}
+
+.navigation .navigation-social-links:visited,
+.navigation .navigation-social-links:active,
+.navigation .navigation-social-links {
+    color: initial;
+    margin-right: 0.25rem;
+
+}
+
+.navigation .navigation-social-links:hover {
+    color:lavender;
 }

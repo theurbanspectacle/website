@@ -1,0 +1,31 @@
+.portfolio-item {
+    margin: 0 auto;
+    margin-bottom: 0.5rem;
+    width: 320px;
+    text-align: right;
+}
+
+.portfolio-item .portfolio-link {
+    position: relative;
+    z-index: 2;
+    font-size: 1.75rem; 
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.portfolio-item .portfolio-link:visited,
+.portfolio-item .portfolio-link:active,
+.portfolio-item .portfolio-link {
+    color: initial;
+}
+
+.portfolio-item .portfolio-link:hover {
+    color:lavender;
+}
+
+
+.portfolio-item .asterisk {
+    font-size: 14px;
+    vertical-align: top;
+    padding-left: 2px;
+}

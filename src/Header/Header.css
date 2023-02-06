@@ -28,16 +28,6 @@
     padding-left: 6px;
 }
 
-.header .dot {
-    width: 4px;
-    height: 4px;
-    background-color: black;
-    display: inline-block;
-    margin: 2px 3px;
-    border-radius: 4px;
-
-}
-
 .header .asterisk {
     font-size: 14px;
     vertical-align: top;
@@ -46,5 +36,4 @@
 
 .header .title:hover {
     color:lavender;
-
 }

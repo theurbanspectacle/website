@@ -1,0 +1,12 @@
+.contact {
+    height: 100%;
+}
+
+.contact .contact-field {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    width: 90%;
+    margin-left: auto;
+    display: block;
+}
