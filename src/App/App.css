@@ -25,5 +25,6 @@
     .wrapper.needs-scrolling {
         z-index: 2;
         position: relative;
+        padding-bottom: 30px;
     }
 }

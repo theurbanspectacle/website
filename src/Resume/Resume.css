@@ -1,12 +1,30 @@
 .resume {
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.resume .oliver-resume {
+.resume .link-text {
+    width: 166px;
+    font-size: 1.75rem; 
+    font-weight: 600;
+    text-decoration: none;
     position: relative;
     z-index: 2;
-    height: 100%;
-    width: 90%;
-    margin-left: auto;
-    display: block;
+}
+
+.resume .link-text svg {
+    display: inline-block;
+    margin-left: 8px;
+}
+
+.resume .link-text:visited,
+.resume .link-text:active,
+.resume .link-text {
+    color: initial;
+}
+
+.resume .link-text:hover {
+    color:lavender;
 }

@@ -1,7 +1,7 @@
 .navigation {
     display: flex;
     position: relative;
-    z-index: 2;
+    z-index: 5;
     flex-direction: column;
 }
 
@@ -27,6 +27,11 @@
 .navigation .navigation-socials {
     padding-left: 6px;
     padding-bottom: 3px;
+    position: fixed;
+    bottom: 23px;
+    left: 23px;
+    z-index: 5;
+    background-color: white;
 }
 
 .navigation .navigation-social-links:visited,
